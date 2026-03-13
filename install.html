@@ -11,10 +11,11 @@
 ========================= */
 
 const prerelease = true;          // true = beta builds
-const androidPlay = "XXX";        // Google Play
-const iosTestflight = "YYY";      // TestFlight
+const prereleasePlay = true;          // true = beta builds
+const androidPlay = "https://play.google.com/store/apps/details?id=com.nokings.aaup";        // Google Play
+const iosTestflight = "https://testflight.apple.com/join/sZ2jnFWW";      // TestFlight
 const iosAppStore = "ZZZ";        // Apple App Store
-const androidApk = "PPP";         // prerelease APK download
+const androidApk = "https://munsky.github.io/NoKingsAAUP/app-release.apk";         // prerelease APK download
 
 const desktopPage = null;         // optional landing page
 
@@ -38,7 +39,7 @@ function redirect() {
     const {isiOS, isAndroid} = detectOS();
 
     if (isAndroid) {
-        if (prerelease) {
+        if (prereleasePlay) {
             window.location.replace(androidApk);
         } else {
             window.location.replace(androidPlay);
