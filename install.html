@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Install App</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script>
+/* =========================
+   CONFIGURATION
+========================= */
+
+const prerelease = true;          // true = beta builds
+const androidPlay = "XXX";        // Google Play
+const iosTestflight = "YYY";      // TestFlight
+const iosAppStore = "ZZZ";        // Apple App Store
+const androidApk = "PPP";         // prerelease APK download
+
+const desktopPage = null;         // optional landing page
+
+/* ========================= */
+
+function detectOS() {
+
+    const ua = navigator.userAgent || navigator.vendor || window.opera;
+
+    const isiOS =
+        /iPad|iPhone|iPod/.test(ua) ||
+        (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+    const isAndroid = /android/i.test(ua);
+
+    return {isiOS, isAndroid};
+}
+
+function redirect() {
+
+    const {isiOS, isAndroid} = detectOS();
+
+    if (isAndroid) {
+        if (prerelease) {
+            window.location.replace(androidApk);
+        } else {
+            window.location.replace(androidPlay);
+        }
+        return;
+    }
+
+    if (isiOS) {
+        if (prerelease) {
+            window.location.replace(iosTestflight);
+        } else {
+            window.location.replace(iosAppStore);
+        }
+        return;
+    }
+
+    /* Desktop or unknown platform */
+
+    if (desktopPage) {
+        window.location.replace(desktopPage);
+        return;
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("manual-links").style.display = "block";
+    });
+}
+
+redirect();
+</script>
+
+<style>
+body{
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    text-align:center;
+    margin-top:80px;
+    padding:20px;
+}
+
+a{
+    display:block;
+    margin:12px;
+    font-size:20px;
+}
+
+.small{
+    color:#666;
+    font-size:14px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Redirecting to the app install page…</h2>
+
+<div id="manual-links" style="display:none">
+
+<p>If you were not redirected, choose your platform:</p>
+
+<a href="XXX">Android (Google Play)</a>
+<a href="PPP">Android Beta (APK download)</a>
+
+<a href="YYY">iOS Beta (TestFlight)</a>
+<a href="ZZZ">iOS App Store</a>
+
+<p class="small">If installing the Android beta, you may need to allow
+"Install unknown apps" in your Android settings.</p>
+
+</div>
+
+</body>
+</html>
