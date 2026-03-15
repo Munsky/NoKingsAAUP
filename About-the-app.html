@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the No Kings AAUP App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: rgb(184, 65, 85);
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        
+        .intro-section {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 40px;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .intro-section p {
+            margin-bottom: 15px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid white;
+            padding-bottom: 10px;
+        }
+        
+        .section p {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .features-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .features-list li {
+            margin-bottom: 8px;
+            margin-left: 20px;
+        }
+        
+        .features-list li:before {
+            content: "• ";
+            margin-left: -20px;
+            margin-right: 10px;
+        }
+        
+        .carousel-container {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 40px 0;
+        }
+        
+        .carousel-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .carousel {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            padding: 20px;
+        }
+        
+        .carousel-slide {
+            display: none;
+            text-align: center;
+        }
+        
+        .carousel-slide.active {
+            display: block;
+        }
+        
+        .carousel-slide img {
+            max-width: 100%;
+            max-height: 600px;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        .carousel-caption {
+            margin-top: 15px;
+            font-size: 16px;
+            font-style: italic;
+            min-height: 40px;
+        }
+        
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .carousel-btn {
+            background-color: white;
+            color: rgb(184, 65, 85);
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .carousel-btn:hover {
+            background-color: rgb(200, 200, 200);
+        }
+        
+        .carousel-counter {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        
+        .rally-details {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+        
+        .rally-details h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        
+        .rally-details p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 40px 0;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .contact {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+        
+        .contact h3 {
+            margin-bottom: 10px;
+        }
+        
+        .contact a {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        .contact a:hover {
+            color: rgb(200, 200, 200);
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: white;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        
+        .back-link:hover {
+            color: rgb(200, 200, 200);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        
+        <h1>Join the reFISHtance!</h1>
+        
+        <div class="intro-section">
+            <p>No Kings AAUP is the official app for the No Kings 3 rally on March 28, 2026, in Fort Collins, Colorado. This app has been designed by the volunteers in the American Association of University Professors at CSU to provide a fun way to help our community to build solidarity, take action, and organize for sustained progressive change.</p>
+        </div>
+
+         <div class="carousel-container">
+            <div class="carousel-title">Screenshots from the NoKingsAAUP App</div>
+            <div class="carousel">
+                <div class="carousel-slide active">
+                    <img src="./images/Screenshot_Welcome.png" alt="Screenshot 1">
+                    <div class="carousel-caption" id="caption-0">Welcome screen - Learn about the rally, get up-to-date announcements, and gain acces to rally chants and songs.</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="./images/Screenshot_Signup.png" alt="Screenshot 2">
+                    <div class="carousel-caption" id="caption-1">Sign up screen - Customize your name and write your ptotest message to share with other participants.</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="./images/Screenshot_Bingo.png" alt="Screenshot 3">
+                    <div class="carousel-caption" id="caption-2">Bingo screen - Visit and engage with tables and partner organizations at the rally, and earn fish to place in the resistance.</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="./images/Screenshot_Partner.png" alt="Screenshot 4">
+                    <div class="carousel-caption" id="caption-3">Partner screen - Learn about local organizations, their initiatives, and how to get involved.</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="./images/Screenshot_Avatar.png" alt="Screenshot 5">
+                    <div class="carousel-caption" id="caption-4">Avatar screen - Create a unique fish avatar with custom shapes and colors.</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="./images/Screenshot_ReFISHtance.png" alt="Screenshot 6">
+                    <div class="carousel-caption" id="caption-5">ReFISHtance screen - Assign your resistance fish to rally against adversaries in the federal government who threaten our communities.</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="./images/Screenshot_Protest.png" alt="Screenshot 7">
+                    <div class="carousel-caption" id="caption-6">Protest screen - Read messages from other participants, and like them to show your support.</div>
+                </div>
+            </div>
+
+            
+            <div class="carousel-nav">
+                <button class="carousel-btn" onclick="prevSlide()">← Previous</button>
+                <button class="carousel-btn" onclick="nextSlide()">Next →</button>
+            </div>
+            
+            <div class="carousel-counter">
+                <span id="slide-counter">1</span> of <span id="slide-total">7</span>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Key Features</h2>
+            
+            <h3 style="font-size: 20px; margin-top: 20px; margin-bottom: 10px;">INFORMATION ABOUT LOCAL ORGANIZATIONS</h3>
+            <ul class="features-list">
+                <li>Learn about local groups and progressive activities</li>
+                <li>Meet other progressive members of our community</li>
+                <li>Share progressive values and meet like-minded community members</li>
+            </ul>
+            
+            <h3 style="font-size: 20px; margin-top: 20px; margin-bottom: 10px;">PLAY AAUP PARTNER BINGO</h3>
+            <ul class="features-list">
+                <li>Visit and engage with tables and partner organizations at the rally</li>
+                <li>Learn how local organizations are fighting for social justice</li>
+                <li>Scan QR codes to complete a bingo card</li>
+                <li>Unlock fish avatars to demonstrate your support for democracy</li>
+            </ul>
+            
+            <h3 style="font-size: 20px; margin-top: 20px; margin-bottom: 10px;">CREATE A FISH AVATAR</h3>
+            <ul class="features-list">
+                <li>Design a unique fish avatar with custom shapes and colors</li>
+                <li>Write a message for your avatar to share with the community</li>
+                <li>Join the "reFISHtance" against adversaries who threaten our communities</li>
+            </ul>
+            
+            <h3 style="font-size: 20px; margin-top: 20px; margin-bottom: 10px;">BUILD COMMUNITY SOLIDARITY</h3>
+            <ul class="features-list">
+                <li>Watch as more fish join the animated resistance</li>
+                <li>Work with the community to distribute power and strengthen the resistance against key threats</li>
+                <li>Like and support messages from other participants</li>
+                <li>See your impact as together we tackle injustice</li>
+            </ul>
+            
+            <h3 style="font-size: 20px; margin-top: 20px; margin-bottom: 10px;">STAY CONNECTED</h3>
+            <ul class="features-list">
+                <li>Share QR codes to invite friends to join</li>
+                <li>Access real-time updates on rally information, location, and schedule</li>
+                <li>Connect with partner organizations and resources</li>
+                <li>View signs from the rally</li>
+            </ul>
+            
+            <h3 style="font-size: 20px; margin-top: 20px; margin-bottom: 10px;">COMMUNITY MODERATION</h3>
+            <ul class="features-list">
+                <li>Block users you don't want to see</li>
+                <li>Report inappropriate content</li>
+                <li>Engage within a safe space for political expression</li>
+            </ul>
+        </div>
+        
+        <div class="rally-details">
+            <h3>Rally Details</h3>
+            <p><strong>Date:</strong> March 28, 2026</p>
+            <p><strong>Time:</strong> 10:00 AM - 2:00 PM</p>
+            <p><strong>Location:</strong> Civic Center Park, Fort Collins, Colorado</p>
+        </div>
+        
+        <div class="tagline">
+            We stand against authoritarianism and for democracy, workers' rights, academic freedom, and community solidarity. Every fish in our montage represents a real person taking a stand. When we swim together, we swim stronger.
+        </div>
+        
+        <div class="contact">
+            <h3>Get in Touch</h3>
+            <p>Questions or feedback? Contact us at <a href="mailto:nokingsapp@gmail.com">nokingsapp@gmail.com</a></p>
+        </div>
+    </div>
+    
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const totalSlides = slides.length;
+        
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[n].classList.add('active');
+            document.getElementById('slide-counter').textContent = n + 1;
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+        
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        }
+        
+        // Arrow key navigation
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowRight') {
+                nextSlide();
+            } else if (event.key === 'ArrowLeft') {
+                prevSlide();
+            }
+        });
+    </script>
+</body>
+</html>
