@@ -111,6 +111,11 @@
             text-decoration: underline;
             font-size: 18px;
         }
+
+        .columntext a {
+            color: white;
+            font-size: 18px;
+        }
         
         .column a:hover {
             color: rgb(200, 200, 200);
@@ -136,6 +141,55 @@
             border-top: 1px solid white;
             font-size: 16px;
         }
+        
+        .partnership-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .partnership-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .partnership-list li {
+            margin-bottom: 10px;
+            margin-left: 20px;
+            font-size: 18px;
+            color: white;
+
+        }
+        
+        .partnership-list li:before {
+            content: "• ";
+            margin-left: -20px;
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 1024px) {
+            .partnership-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .partnership-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .partnership-list a {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        .partnership-list a:hover {
+            color: rgb(200, 200, 200);
+        }
     </style>
 </head>
 <body>
@@ -152,15 +206,20 @@
         <div class="columns-container">
             <div class="column">
                 <div class="column-header">iPhones</div>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSesOgy_ejk8ZCLnbRZKr7-aCbyH9us1Q0zY6CrbdVcgNETH8Q/viewform?usp=header" target="_blank">Signup for Pre-Release</a>
-                <a href="./About-the-app.html" class="learn-more">Learn More Here</a>
+                <div class="columntext">Coming soon to the Apple App Store.</div>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSesOgy_ejk8ZCLnbRZKr7-aCbyH9us1Q0zY6CrbdVcgNETH8Q/viewform?usp=header" target="_blank">Signup to get Early Access</a>
             </div>
             <div class="column">
                 <div class="column-header">Androids</div>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSesOgy_ejk8ZCLnbRZKr7-aCbyH9us1Q0zY6CrbdVcgNETH8Q/viewform?usp=header" target="_blank">Signup for Pre-Release</a>
-                <a href="./About-the-app.html" class="learn-more">Learn More Here</a>
+                <div class="columntext">Coming soon to the Google Play Store.</div>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSesOgy_ejk8ZCLnbRZKr7-aCbyH9us1Q0zY6CrbdVcgNETH8Q/viewform?usp=header" target="_blank">Signup to get Early Access</a>
+                <a href="./android-apk.html" class="learn-more">Install now using the Android APK.</a>
             </div>
         </div>
+    </div>
+
+    <div class="headerB">
+        <a href="./About-the-app.html" class="learn-more">Learn more about the NoKingsAAUP app here!</a>
     </div>
 
     <div class="header">
@@ -172,6 +231,30 @@
     </div>
     <div class="header">
         in partnership with:
+    </div>
+    
+    <div class="partnership-container">
+        <ul class="partnership-list">
+            <li><a href="https://aflcio.org/" target="_blank">AFL-CIO</a></li>
+            <li><a href="https://dsafc.org/" target="_blank">DSA Fort Collins</a></li>
+            <li><a href="https://www.indivisible.org/" target="_blank">Indivisible Timnath</a></li>
+            <li>League of Women Voters</li>
+            <li><a href="https://momsdemandaction.org/about/chapters/" target="_blank">Moms Demand Action</a></li>
+        </ul>
+        <ul class="partnership-list">
+            <li><a href="https://NoCo4Palestine.c" target="_blank">NoCo4Palestine</a></li>
+            <li><a href="https://www.notesofdissent.org/" target="_blank">Notes of Dissent Marching Band</a></li>
+            <li>Planned Parenthood of the Rocky Mountains</li>
+            <li><a href="https://pflagfortcollins.org/" target="_blank">PFLAG Fort Collins</a></li>
+            <li><a href="https://podernocos.com/" target="_blank">PODER</a></li>
+        </ul>
+        <ul class="partnership-list">
+            <li>Postcards and Tea</li>
+            <li><a href="https://protectcoloradosfuture.org/" target="_blank">Protect Colorado's Future</a></li>
+            <li><a href="https://SplashNoC0.org/" target="_blank">SPLASH</a></li>
+            <li><a href="https://stemira.org/" target="_blank">STEM Interdisciplinary Rams Alliance</a></li>
+            <li><a href="https://treeswaterpeople.org/" target="_blank">Trees Water People</a></li>
+        </ul>
     </div>
 
     <div class="video-container">
