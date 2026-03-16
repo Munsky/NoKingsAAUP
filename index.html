@@ -190,6 +190,29 @@
         .partnership-list a:hover {
             color: rgb(200, 200, 200);
         }
+        
+        .download-btn-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background-color: white;
+            color: rgb(184, 65, 85);
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+        }
+        
+        .download-btn:hover {
+            background-color: rgb(200, 200, 200);
+        }
     </style>
 </head>
 <body>
@@ -262,6 +285,10 @@
             <source src="images/FishMovieMedium.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+    </div>
+    
+    <div class="download-btn-container">
+        <a href="./images/FishMovieMedium.mp4" download class="download-btn">↓ Download and Share the Animation</a>
     </div>
 
     <div class="event-info" style="margin-top: 40px;">
