@@ -1,8 +1,8 @@
 ﻿Group,Question,Correct,Incorrect1,Incorrect2,Incorrect3,Incorrect4,Response
-1,New Example Q: What is 1+1?,2,1,3,4,4.3,"Example Response: Yay, you got it correct.  Please visit https://aaupcsu.org"
-1,New Example Q: What is 2+1?,3,7,Fish,Bug,Pie,"Example Response: Yay, you got it correct.  Please visit https://aaupcsu.org"
-1,New Example Q: What is 3+1?,4,7,Fish,Bug,Pie,"Example Response: Yay, you got it correct.  Please visit https://aaupcsu.org"
-1,New Example Q: What is 4+1?,5,7,Fish,Bug,Pie,"Example Response: Yay, you got it correct.  Please visit https://aaupcsu.org"
+1,What is the average carbon footprint of a person in the US?,16 tons of CO2,12 tons of CO2,20 tons of CO2,8 tons of CO2,4 tons of CO2,Correct! Please see https://css.umich.edu/publications/factsheets/sustainability-indicators/carbon-footprint-factsheet for more carbon facts.  
+1,What is the estimated carbon emissions reduction for a TWP Justa Clean Cookstove over its lifetime?,12 tons of CO2,1 ton of CO2,3 tons of CO2,6 tons of CO2,9 tons of CO2,Correct! A TWP Justa Clean Cookstove can reduce carbon emissions by 12 tons over its lifetime. Learn more at https://treeswaterpeople.org/carbon-offset
+1,What are the benefits of a TWP Justa Clean Cookstove?,All of the above,Improved health of women and children,Saves trees and improves forest health,Reduced CO2 emissions into the atmosphere,,Correct! A TWP Justa Clean Cookstove has many potential benefits. Learn more at https://treeswaterpeople.org/carbon-offset
+1,New Example Q: What is 1+2?,3,1,3,4,4.3,"Example Response: Yay, you got it correct.  Please visit https://aaupcsu.org"
 2,New Example Q: What is 1+2?,3,1,3,4,4.3,"Example Response: Yay, you got it correct.  Please visit https://aaupcsu.org"
 2,New Example Q: What is 2+2?,4,7,Fish,Bug,Pie,"Example Response: Yay, you got it correct.  Please visit https://aaupcsu.org"
 2,New Example Q: What is 3+2?,5,7,Fish,Bug,Pie,"Example Response: Yay, you got it correct.  Please visit https://aaupcsu.org"
