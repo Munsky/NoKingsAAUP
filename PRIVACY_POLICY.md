@@ -1,11 +1,13 @@
 # Privacy Policy for AAUPNoKings App
 
-**Last Updated:** March 6, 2026  
-**App Version:** 1.0.0.18
+**Last Updated:** March 18, 2026  
+**App Version:** 1.0.0.30
 
 ## Introduction
 
 This Privacy Policy describes how the AAUPNoKings App ("we," "our," or "the App") collects, uses, and protects your information when you use our mobile application.
+
+Note -- you control what information you share. We only collect the information you provide, and you can delete it at any time directly within the app. Moreover, you can use the app completely anonymously if you choose, and you can play Bingo in Airplane mode, so that you do not have to connect to the internet, and no information will be shared with us or anyone at all (in this case the ReFISHtance montage will not update and you will not be able to share or read messages from other users).
 
 ## Information We Collect
 
