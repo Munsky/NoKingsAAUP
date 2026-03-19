@@ -17,7 +17,7 @@ const iosTestflight = "https://munsky.github.io/NoKingsAAUP/";      // TestFligh
 const iosAppStore = "ZZZ";        // Apple App Store
 const androidApk = "https://munsky.github.io/NoKingsAAUP/";         // prerelease APK download
 
-const desktopPage = null;         // optional landing page
+const desktopPage = "./index.html";         // optional landing page
 
 /* ========================= */
 
@@ -34,24 +34,61 @@ function detectOS() {
     return {isiOS, isAndroid};
 }
 
+function redirectWithDelay(url, customMessage = null, delaySeconds = 5) {
+    document.addEventListener("DOMContentLoaded", function() {
+        let countdown = delaySeconds;
+        const messageEl = document.getElementById("redirect-message");
+        
+        if (messageEl) {
+            if (customMessage) {
+                messageEl.innerHTML = customMessage.replace(/XXX/g, countdown);
+            } else {
+                messageEl.textContent = `Redirecting to ${url} in ${countdown} seconds`;
+            }
+            
+            const interval = setInterval(function() {
+                countdown--;
+                if (customMessage) {
+                    messageEl.innerHTML = customMessage.replace(/XXX/g, countdown);
+                } else {
+                    messageEl.textContent = `Redirecting to ${url} in ${countdown} seconds`;
+                }
+                
+                if (countdown <= 0) {
+                    clearInterval(interval);
+                    window.location.replace(url);
+                }
+            }, 1000);
+        } else {
+            setTimeout(function() {
+                window.location.replace(url);
+            }, delaySeconds * 1000);
+        }
+    });
+}
+
 function redirect() {
 
     const {isiOS, isAndroid} = detectOS();
 
     if (isAndroid) {
         if (prereleasePlay) {
-            window.location.replace(androidApk);
+            const AndroidPrereleaseMessage = `App is not yet available on Google Play. Redirecting to main page with where you can apply for Early Access or download installable APK in XXX seconds.`;
+            redirectWithDelay(androidApk, AndroidPrereleaseMessage, 10);
         } else {
-            window.location.replace(androidPlay);
+            const GooglePlayMessage = `Redirecting to Google Play page in XXX seconds.`;
+            redirectWithDelay(androidPlay, GooglePlayMessage, 5);
         }
         return;
     }
 
     if (isiOS) {
         if (prerelease) {
-            window.location.replace(iosTestflight);
+            const testflightMessage = `Redirecting to Apple TestFlight page in XXX seconds.<br><br>If you have not done so previously, you will need to install Apple TestFlight to use the app.<br><br>If you prefer to wait for the official Apple Store release, please check back soon.`;
+            redirectWithDelay(iosTestflight, testflightMessage, 10);
         } else {
-            window.location.replace(iosAppStore);
+            const appStoreMessage = `Redirecting to Apple App Store page in XXX seconds.`;
+            redirectWithDelay(iosAppStore, appStoreMessage, 5);
         }
         return;
     }
@@ -59,9 +96,15 @@ function redirect() {
     /* Desktop or unknown platform */
 
     if (desktopPage) {
-        window.location.replace(desktopPage);
+        const desktopMessage = `The app is not available for desktop platforms -- redirecting to the main page in XXX seconds.`;
+        redirectWithDelay(desktopPage, desktopMessage, 10);
         return;
     }
+
+    /* Redirect to index if neither Android nor iOS */
+    const desktopMessage = `The app is not available for desktop platforms -- redirecting to the main page in XXX seconds.`;
+    redirectWithDelay("./index.html", desktopMessage, 7);
+    return;
 
     document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("manual-links").style.display = "block";
@@ -96,6 +139,7 @@ a{
 <body>
 
 <h2>Redirecting to the app install page…</h2>
+<p id="redirect-message"></p>
 
 <div id="manual-links" style="display:none">
 
