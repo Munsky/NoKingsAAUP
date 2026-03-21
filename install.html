@@ -15,7 +15,7 @@ const prereleasePlay = true;          // true = beta builds
 const androidPlay = "https://play.google.com/store/apps/details?id=com.nokings.aaup";        // Google Play
 const iosTestflight = "https://munsky.github.io/NoKingsAAUP/";      // TestFlight
 const iosAppStore = "ZZZ";        // Apple App Store
-const androidApk = "https://munsky.github.io/NoKingsAAUP/";         // prerelease APK download
+const androidApk = "https://play.google.com/store/apps/details?id=com.nokings.aaup";         // prerelease APK download
 
 const desktopPage = "./index.html";         // optional landing page
 
@@ -73,8 +73,8 @@ function redirect() {
 
     if (isAndroid) {
         if (prereleasePlay) {
-            const AndroidPrereleaseMessage = `App is not yet available on Google Play. Redirecting to main page with where you can apply for Early Access or download installable APK in XXX seconds.`;
-            redirectWithDelay(androidApk, AndroidPrereleaseMessage, 10);
+            const AndroidPrereleaseMessage = `Early Access is now available. Redirecting to Google Play Store in XXX seconds.`;
+            redirectWithDelay(androidApk, AndroidPrereleaseMessage, 5);
         } else {
             const GooglePlayMessage = `Redirecting to Google Play page in XXX seconds.`;
             redirectWithDelay(androidPlay, GooglePlayMessage, 5);
@@ -84,7 +84,7 @@ function redirect() {
 
     if (isiOS) {
         if (prerelease) {
-            const testflightMessage = `Redirecting to Apple TestFlight page in XXX seconds.<br><br>If you have not done so previously, you will need to install Apple TestFlight to use the app.<br><br>If you prefer to wait for the official Apple Store release, please check back soon.`;
+            const testflightMessage = `Early Access is now available. Redirecting to Apple TestFlight page in XXX seconds.<br><br>If you have not done so previously, you will need to install Apple TestFlight to use the app.<br><br>If you prefer to wait for the official Apple Store release, please check back soon.`;
             redirectWithDelay(iosTestflight, testflightMessage, 10);
         } else {
             const appStoreMessage = `Redirecting to Apple App Store page in XXX seconds.`;
