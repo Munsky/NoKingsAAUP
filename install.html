@@ -11,7 +11,7 @@
 ========================= */
 
 const prerelease = true;          // true = beta builds
-const prereleasePlay = true;          // true = beta builds
+const prereleasePlay = false;          // true = beta builds
 const androidPlay = "https://play.google.com/store/apps/details?id=com.nokings.aaup";        // Google Play
 const iosTestflight = "https://munsky.github.io/NoKingsAAUP/";      // TestFlight
 const iosAppStore = "ZZZ";        // Apple App Store
@@ -77,7 +77,7 @@ function redirect() {
             redirectWithDelay(androidApk, AndroidPrereleaseMessage, 5);
         } else {
             const GooglePlayMessage = `Redirecting to Google Play page in XXX seconds.`;
-            redirectWithDelay(androidPlay, GooglePlayMessage, 5);
+            redirectWithDelay(androidPlay, GooglePlayMessage, 0);
         }
         return;
     }
@@ -88,7 +88,7 @@ function redirect() {
             redirectWithDelay(iosTestflight, testflightMessage, 10);
         } else {
             const appStoreMessage = `Redirecting to Apple App Store page in XXX seconds.`;
-            redirectWithDelay(iosAppStore, appStoreMessage, 5);
+            redirectWithDelay(iosAppStore, appStoreMessage, 0);
         }
         return;
     }
