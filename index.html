@@ -207,7 +207,25 @@
             background-color: white;
             color: rgb(184, 65, 85);
             padding: 12px 30px;
-            font-size: 16px;
+            font-size: 10px;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 10px;
+        }
+        
+        .download-btn:hover {
+            background-color: rgb(200, 200, 200);
+        }
+        
+        .app-btn {
+            display: inline-block;
+            background-color: white;
+            color: rgb(184, 65, 85);
+            padding: 20px 50px;
+            font-size: 28px;
             font-weight: bold;
             border-radius: 8px;
             text-decoration: none;
@@ -216,7 +234,7 @@
             margin-bottom: 20px;
         }
         
-        .download-btn:hover {
+        .app-btn:hover {
             background-color: rgb(200, 200, 200);
         }
     </style>
@@ -241,29 +259,16 @@
         <a href="./images/FishMovieMedium.mp4" download class="download-btn">↓ Download and Share the Animation</a>
     </div>
     
-    <div class="download-section">
-        <div class="download-title">Get the Official NoKingsAAUP Mobile Phone App:</div>
-        <div class="columns-container">
-            <div class="column">
-                <div class="column-header">iPhones</div>
-                <div class="columntext">Coming soon to the Apple App Store.</div>
-                <a href="https://testflight.apple.com/join/sZ2jnFWW" target="_blank">Get Early Access on Apple TestFlight</a>
-            </div>
-            <div class="column">
-                <div class="column-header">Androids</div>
-                <div class="columntext">Coming soon to the Google Play Store.</div>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSesOgy_ejk8ZCLnbRZKr7-aCbyH9us1Q0zY6CrbdVcgNETH8Q/viewform?usp=header" target="_blank">Signup to get Early Access</a>
-                <a href="./android-apk.html" class="learn-more">Install now using the Android APK.</a>
-            </div>
-        </div>
+    <div class="download-btn-container">
+        <a href="./install.html" class="app-btn">Get The NoKingsAAUP App</a>
     </div>
 
     <div class="headerB">
-        <a href="./About-the-app.html" class="learn-more">Learn more about the NoKingsAAUP app here!</a>
+        <a href="./About-the-app.html" class="learn-more">Learn more here!</a>
     </div>
 
     <div class="header">
-        Brought to you by:
+        The NoKingsAAUP app was brought to you by:
     </div>
     <div class="headerB">
         <a href="https://aaupcsu.org" target="_blank">The American Association of University Professors,
@@ -314,5 +319,27 @@
     <div class="event-info-small" style="margin-top: 10px;">
         You can delete your information at any time directly from the app or by <a href="https://forms.gle/ydhNHFphvogEpt4z5" target="_blank">Clicking here</a> and entering the email for the account you wish to delete.
     </div>
+
+    <script>
+        function setAppButtonHoverMessage() {
+            const ua = navigator.userAgent || navigator.vendor || window.opera;
+            const isiOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+            const isAndroid = /android/i.test(ua);
+
+            document.addEventListener("DOMContentLoaded", function() {
+                const appBtn = document.querySelector(".app-btn");
+                if (appBtn) {
+                    if (isAndroid) {
+                        appBtn.title = "Get NoKingsAAUP at Google Play";
+                    } else if (isiOS) {
+                        appBtn.title = "Get NoKingsAAUP at Apple Test Flight";
+                    } else {
+                        appBtn.title = "The NoKingsAAUP App is Only Available on Android and iPhone";
+                    }
+                }
+            });
+        }
+        setAppButtonHoverMessage();
+    </script>
 </body>
 </html>

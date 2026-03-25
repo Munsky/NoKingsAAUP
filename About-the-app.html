@@ -211,6 +211,29 @@
         .back-link:hover {
             color: rgb(200, 200, 200);
         }
+        
+        .download-btn-container {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .app-btn {
+            display: inline-block;
+            background-color: white;
+            color: rgb(184, 65, 85);
+            padding: 20px 50px;
+            font-size: 28px;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .app-btn:hover {
+            background-color: rgb(200, 200, 200);
+        }
     </style>
 </head>
 <body>
@@ -221,6 +244,10 @@
         
         <div class="intro-section">
             <p>NoKingsAAUP is the official mobile phone app for the No Kings 3 rally on March 28, 2026, in Fort Collins, Colorado. This app has been designed by local volunteer scientists and artists from the American Association of University Professors at CSU to provide a fun and safe way to help our community to build solidarity, take action, and organize for sustained progressive change.</p>
+        </div>
+
+        <div class="download-btn-container">
+            <a href="./install.html" class="app-btn">Get The NoKingsAAUP App</a>
         </div>
 
          <div class="carousel-container">
@@ -390,6 +417,27 @@
                 prevSlide();
             }
         });
+
+        // Set app button hover message based on OS
+        function setAppButtonHoverMessage() {
+            const ua = navigator.userAgent || navigator.vendor || window.opera;
+            const isiOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+            const isAndroid = /android/i.test(ua);
+
+            document.addEventListener("DOMContentLoaded", function() {
+                const appBtn = document.querySelector(".app-btn");
+                if (appBtn) {
+                    if (isAndroid) {
+                        appBtn.title = "Get NoKingsAAUP at Google Play";
+                    } else if (isiOS) {
+                        appBtn.title = "Get NoKingsAAUP at Apple Test Flight";
+                    } else {
+                        appBtn.title = "The NoKingsAAUP App is Only Available on Android and iPhone";
+                    }
+                }
+            });
+        }
+        setAppButtonHoverMessage();
     </script>
 </body>
 </html>

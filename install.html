@@ -67,6 +67,24 @@ function redirectWithDelay(url, customMessage = null, delaySeconds = 5) {
     });
 }
 
+function setHoverMessages() {
+    const {isiOS, isAndroid} = detectOS();
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const links = document.querySelectorAll("a");
+        
+        links.forEach(link => {
+            if (isAndroid) {
+                link.title = "Get NoKingsAAUP at Google Play";
+            } else if (isiOS) {
+                link.title = "Get NoKingsAAUP at Apple Test Flight";
+            } else {
+                link.title = "The NoKingsAAUP App is Only Available on Android and iPhone";
+            }
+        });
+    });
+}
+
 function redirect() {
 
     const {isiOS, isAndroid} = detectOS();
@@ -84,8 +102,8 @@ function redirect() {
 
     if (isiOS) {
         if (prerelease) {
-            const testflightMessage = `Early Access is now available. Redirecting to Apple TestFlight page in XXX seconds.<br><br>If you have not done so previously, you will need to install Apple TestFlight to use the app.`;
-            redirectWithDelay(iosTestflight, testflightMessage, 10);
+            const testflightMessage = `Early Access is now available on Apple TestFlight. Redirecting in XXX seconds.<br><br>If you have not done so previously, you will need to install Apple TestFlight to use the app.`;
+            redirectWithDelay(iosTestflight, testflightMessage, 3);
         } else {
             const appStoreMessage = `Redirecting to Apple App Store page in XXX seconds.`;
             redirectWithDelay(iosAppStore, appStoreMessage, 0);
@@ -111,6 +129,7 @@ function redirect() {
     });
 }
 
+setHoverMessages();
 redirect();
 </script>
 
