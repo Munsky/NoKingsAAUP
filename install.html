@@ -17,7 +17,7 @@ const iosTestflight = "https://testflight.apple.com/join/sZ2jnFWW";      // Test
 const iosAppStore = "https://testflight.apple.com/join/sZ2jnFWW";        // Apple App Store
 const androidApk = "https://play.google.com/store/apps/details?id=com.nokings.aaup";         // prerelease APK download
 
-const desktopPage = "./index.html";         // optional landing page
+const desktopPage = "./web-app/";         // optional landing page
 
 /* ========================= */
 
@@ -79,7 +79,7 @@ function setHoverMessages() {
             } else if (isiOS) {
                 link.title = "Get NoKingsAAUP at Apple Test Flight";
             } else {
-                link.title = "The NoKingsAAUP App is Only Available on Android and iPhone";
+                link.title = "Use the NoKingsAAUP app in your Browser";
             }
         });
     });
@@ -114,14 +114,14 @@ function redirect() {
     /* Desktop or unknown platform */
 
     if (desktopPage) {
-        const desktopMessage = `The app is not available for desktop platforms -- redirecting to the main page in XXX seconds.`;
-        redirectWithDelay(desktopPage, desktopMessage, 10);
+        const desktopMessage = `Redirecting to the Online NoKingsAAUP Web Browser App in XXX seconds. Please note that performance may be slower on desktop browsers. For the best experience, please use the app on an Android or iOS device.`;
+        redirectWithDelay(desktopPage, desktopMessage, 7);
         return;
     }
 
     /* Redirect to index if neither Android nor iOS */
-    const desktopMessage = `The app is not available for desktop platforms -- redirecting to the main page in XXX seconds.`;
-    redirectWithDelay("./index.html", desktopMessage, 7);
+    const desktopMessage = `Redirecting to the Online NoKingsAAUP Web Browser App in XXX seconds. Please note that performance may be slower on desktop browsers. For the best experience, please use the app on an Android or iOS device.`;
+    redirectWithDelay("./web-app/", desktopMessage, 7);
     return;
 
     document.addEventListener("DOMContentLoaded", function() {
