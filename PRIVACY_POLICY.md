@@ -1,13 +1,11 @@
 # Privacy Policy for AAUPNoKings App
 
-**Last Updated:** March 18, 2026  
-**App Version:** 1.0.0.30
+**Last Updated:** May 29, 2026  
+**App Version:** 1.1.0+91
 
 ## Introduction
 
 This Privacy Policy describes how the AAUPNoKings App ("we," "our," or "the App") collects, uses, and protects your information when you use our mobile application.
-
-Note -- you control what information you share. We only collect the information you provide, and you can delete it at any time directly within the app. Moreover, you can use the app completely anonymously if you choose, and you can play Bingo in Airplane mode, so that you do not have to connect to the internet, and no information will be shared with us or anyone at all (in this case the ReFISHtance montage will not update and you will not be able to share or read messages from other users).
 
 ## Information We Collect
 
@@ -18,18 +16,23 @@ When you use the App, you may voluntarily provide the following information:
 - **User Name**: An optional display name for your fish avatar in the Resistance School
 - **Protest Message**: An optional message you wish to amplify (e.g., "Protect Funding for Science"), which will be displayed alongside your fish avatar in the montage
 - **Email Address**: An optional email address if you wish to be contacted about future AAUP-CSU events
+- **Uploaded Sign Images**: If you choose to upload or download sign images, those specific images may be stored locally on your device or shared with the community, but only with your explicit action
 
 ### Automatically Collected Information
 
 - **Game Progress**: Your bingo game score and completed squares
 - **Fish Avatar**: The color and shape you select for your fish avatar (e.g., Fish_C, Puff, Turtle, Crab, Jelly)
 - **Appreciation/Likes**: Records of which protest messages you have "liked" or shown support for
+- **Bookmarked Events**: (stored only on your device) Events you have bookmarked in the calendar for later reference 
+- **Event Notifications**: (stored only on your device) Your preference for event notifications (1 hour before, 1 day before, or none)
+- **Custom Calendars**: (stored only on your device) Calendar URLs and display preferences for custom calendars you add
 - **Anonymous User ID**: If you use the app without signing up, a randomly generated anonymous identifier is created to track your game progress
 - **Timestamp**: The date and time when you sign up or update your information
 
 ### Technical Information
 
 - **Camera Access**: The App requests camera permission only for QR code scanning functionality. No photos or videos are stored or transmitted.
+- **Push Notifications**: If you request event notifications, the App may use push notification tokens to deliver updates about those events. These tokens are not linked to any personal information, they are not collected or communicated outside of your device, and are used solely for the purpose of sending notifications.
 
 ## How We Use Your Information
 
@@ -39,19 +42,24 @@ We use the collected information for the following purposes:
 - **Event Communication**: To contact you about future AAUP-CSU events (only if you provide an email address, and you will have the option to remove it at any time)
 - **Display Messages**: To show your optional protest message alongside your fish avatar
 - **Community Engagement**: To track which messages resonate with the community through the "like" feature
+- **Event Bookmarking**: (only on your device) To maintain a list of events you wish to keep track of
+- **Event Notifications**: (only on your device) To schedule and deliver local device notifications for bookmarked events based on your chosen timing preferences (1 hour before or 1 day before the event)
+- **Calendar Integration**: (only on your device) To fetch and display events from custom calendars you subscribe to
 - **Aggregate Statistics**: To display total points and number of fish across all users
 
 ## Data Sharing
 
-We do not sell, trade, or rent your personal information to third parties. Your information is used exclusively by AAUP-CSU for the purposes stated above.
+We do not sell, trade, or rent your personal information to any third parties. Your information is used exclusively by AAUP-CSU for the purposes stated above.
 
 **Email Addresses**: If you provide an email address, it will be shared only with AAUP-CSU for the purpose of contacting you about future events. It will not be shared with any other organizations.
 
 **Protest Messages and Likes**: Your optional protest message and fish avatar are visible to all App users in the collective montage. Other users can show appreciation for messages by "liking" them. Like counts are publicly visible alongside messages. User names are displayed with messages if provided.
 
+**Uploaded Sign Images**: If you choose to upload sign images, those specific images may be shared with the community and visible to other users. However, this is entirely optional and requires explicit action on your part.
+
 ## Data Storage
 
-Your information is stored securely using Firebase Firestore, a cloud-based database service provided by Google. Firebase employs industry-standard security measures to protect your data.
+Information that we collect is stored securely using Firebase Firestore, a cloud-based database service provided by Google. Firebase employs industry-standard security measures to protect your data.
 
 ## Local Storage
 
@@ -62,8 +70,13 @@ The App stores certain information locally on your device to improve performance
 - **Login Information**: Your user ID to maintain your session across app uses
 - **Avatar Change Tracking**: Whether you've received the one-time reward for customizing your avatar
 - **Masked Email**: After you submit your signup information containing an email address, the actual email is immediately deleted from local storage and replaced with a masked version (e.g., "b****") for your protection
+- **Bookmarked Events**: A local list of events you have bookmarked for quick reference
+- **Notification Preferences**: Your chosen notification timing for each bookmarked event (1 hour before, 1 day before, or no notification)
+- **Custom Calendars**: Information about custom calendars you have added, including display name, calendar icon, and description
 
-This locally stored data remains on your device and is used to restore your progress when you reopen the App. You can clear this data by uninstalling the App or clearing the App's data through your device settings.
+This locally stored data remains on your device and is used to restore your progress and preferences when you reopen the App. You can clear this data by uninstalling the App or clearing the App's data through your device settings.
+
+**Note on Notifications**: Event notifications are scheduled and stored locally on your device using the device's notification system. Notification settings are stored locally and are never transmitted to our servers.
 
 ## Email Privacy Protection
 
@@ -76,6 +89,27 @@ When you provide an email address on the Sign Up page:
 5. If you wish to remove email communication, you can leave the email field blank or enter a masked email, and AAUP-CSU will have your original email address already on file
 
 This two-step masking process protects your email privacy in local storage while still allowing AAUP-CSU to reach you about events.
+
+## Notifications Privacy
+
+The App can send local notifications to remind you about bookmarked events:
+
+- **Local Processing**: All notification scheduling and delivery happens on your device. No notification data is sent to external servers.
+- **User Control**: You have full control over notifications. You can:
+  - Disable notifications for individual events when bookmarking them
+  - Remove bookmarks to cancel all notifications for that event
+  - Manage notification permissions through your device settings
+- **No Tracking**: We do not track whether you receive or interact with notifications
+- **Device Permission**: The App requests notification permission from your device. You can grant or deny this permission, and can change your preference at any time in your device's notification settings
+
+## Custom Calendars Privacy
+
+You can add custom calendars to the App by providing a calendar feed URL:
+
+- **Your Calendar Data**: Only you can see the calendars you add and the events from those calendars
+- **No Server Storage**: Custom calendar URLs and your calendar preferences are stored only on your device
+- **Calendar Fetching**: When you add a custom calendar, the App fetches events directly from the calendar provider's servers. These requests come from your device and follow the calendar provider's privacy policies
+- **No Caching on Our Servers**: Calendar events are not stored on our servers. They are fetched fresh each time you open the calendar view
 
 ## Your Rights and Choices
 
@@ -114,6 +148,23 @@ We may update this Privacy Policy from time to time. Any changes will be reflect
 We retain your information for as long as necessary to provide the App's functionality and fulfill the purposes outlined in this policy. If you wish to have your data deleted, please contact us using the information below.
 
 ## Version History
+
+**v1.1.0+91** (May 29, 2026)
+- Added event notification system: Users can bookmark events and set notifications (1 hour or 1 day before)
+- Added custom calendar support: Users can subscribe to additional calendar feeds
+- Enhanced calendar display with fish avatar icons for custom calendars
+- Improved event search and filtering functionality
+- Added calendar description feature for custom calendars
+- Updated privacy policy to document notification and custom calendar features
+
+**v1.0.3+68** (April 5, 2026)
+- Updated download functionality: Sign images now open in browser for native download dialog instead of app-managed storage
+- Simplified permissions: Removed storage permission requirement as downloads are now handled by browser
+
+**v1.0.3+65** (April 5, 2026)
+- Added storage permission: Users can now download and save sign images from the Signs page to their device's Downloads folder
+- Added tutorial help system across multiple pages for improved user guidance
+- Enhanced Rally Posters page with Help button and tutorial messages
 
 **v1.0.0.9** (March 6, 2026)
 - Added email masking: Email addresses are masked in local storage after submission for privacy protection
